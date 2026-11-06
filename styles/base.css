@@ -1,0 +1,157 @@
+:root {
+  --outer: #1a222f;        
+  --accent: #22679b;       
+  --page: #07001c;
+  --text: #faefef;
+  --light-text: #ffffff;
+  --border: #b8bcc2;
+  --font: "Montserrat", Arial, sans-serif;
+}
+
+
+* {
+  box-sizing: border-box;   
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  color: var(--text);
+  background: var(--page);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+header {
+  background: var(--accent);
+  color: var(--light-text);
+}
+
+#course-title {
+  display: block;           
+  text-align: center;
+  font-size: 1.4rem;
+  padding: 1rem;
+}
+
+nav {
+  display: flex;                      
+  justify-content: space-between;     
+  background: var(--outer);
+  padding: 0 1rem;
+}
+
+nav a {
+  color: var(--light-text);
+  text-decoration: none;
+  padding: 0.7rem 1rem;
+  border-bottom: 3px solid transparent;  
+  transition: border-color 0.2s, background 0.2s;
+}
+
+nav a:hover,
+nav a:focus {
+  background: rgba(255, 255, 255, 0.1);
+  border-bottom-color: #89b1cf;
+}
+
+
+main {
+  max-width: 960px;
+  margin: 0 auto;           
+  padding: 0 1rem 2rem;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 400;
+  font-size: 2.2rem;
+  margin: 1.5rem 0;
+}
+
+
+.cards {
+  display: grid;
+  grid-template-columns: 2fr 1fr;   
+  gap: 1.5rem;
+}
+
+.card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;        
+}
+
+.card h2 {
+  margin: 0;
+  padding: 0.7rem;
+  background: var(--accent);
+  color: var(--light-text);
+  text-align: center;
+  font-size: 1rem;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.card-body > img {
+  float: right;
+  margin: 0 0 1rem 1rem;
+  border: 1px solid var(--border);
+}
+
+.card h3 {
+  clear: both;
+  text-align: center;
+  font-size: 1.05rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.3rem;
+}
+
+figure {
+  float: left;
+  margin: 0 1rem 0.5rem 0;
+  text-align: center;
+  max-width: 140px;
+}
+
+figcaption {
+  font-size: 0.75rem;
+  font-style: italic;
+}
+
+.card ul {
+  line-height: 2;
+}
+
+footer {
+  background: var(--outer);
+  color: var(--light-text);
+  text-align: center;
+  padding: 1rem;
+}
+
+footer p {
+  margin: 0.2rem 0;
+}
+
+#lastModified {
+  font-size: 0.8rem;
+  color: #d9f27a;
+}
+
+@media (max-width: 700px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
