@@ -1,0 +1,19 @@
+@media (min-width: 700px) {
+  /*only shows on mobile */
+  #menu { display: none; }
+
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    margin-top: 0;
+    gap: 1rem;
+  }
+
+  nav a { padding: 0.5rem 0.75rem; }
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
